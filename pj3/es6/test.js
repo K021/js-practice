@@ -3,7 +3,7 @@
 const sentences = [
   { subject: 'JavaScript', verb: 'is', object: 'great' },
   { subject: 'Elephants', verb: 'are', object: 'large' }
-]
+];
 
 // es6 기능: 객체 분해
 function say({ subject, verb, object }) {
@@ -13,5 +13,5 @@ function say({ subject, verb, object }) {
 
 // es6 기능: 반복문
 for(let s of sentences) {
-  say(s)
+  say(s);
 }
