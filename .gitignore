@@ -1,7 +1,7 @@
 
 ### Custom ###
-dist/*
-public/dist/*
+**/dist/*
+**/public/dist/*
 
 # Created by https://www.gitignore.io/api/vim,node,macos,webstorm
 # Edit at https://www.gitignore.io/?templates=vim,node,macos,webstorm
