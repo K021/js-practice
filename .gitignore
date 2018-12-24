@@ -2,6 +2,8 @@
 ### Custom ###
 **/dist/*
 **/public/dist/*
+**/temp.*
+**/temp/*
 
 # Created by https://www.gitignore.io/api/vim,node,macos,webstorm
 # Edit at https://www.gitignore.io/?templates=vim,node,macos,webstorm

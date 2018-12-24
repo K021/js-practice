@@ -1,13 +1,20 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const eslint = require('gulp-eslint');
+const eslintIfFixed = require('gulp-eslint-if-fixed');
 // gulp dependency 를 여기에 쓴다
 
 gulp.task('default', function(done) {
   // ESLint 실행
-  gulp.src(['es6/**/*.js', 'public/es6/**/*.js'])
-    .pipe(eslint({fix:true}))
-    .pipe(eslint.format());
+  gulp.src('es6/**/*.js')
+    .pipe(eslint({fix: true}))
+    .pipe(eslint.format())
+    .pipe(eslintIfFixed('es6'))
+
+  gulp.src('public/es6/**/*.js')
+    .pipe(eslint({fix: true}))
+    .pipe(eslint.format())
+    .pipe(eslintIfFixed('public/es6'));
 
   // node source
   gulp.src('es6/**/*.js')  // 변환하려는 파일 지정. ** 모든 중간 디렉터리 포함
@@ -18,5 +25,6 @@ gulp.task('default', function(done) {
   gulp.src('public/es6/**/*.js')
     .pipe(babel())
     .pipe(gulp.dest('public/dest'));
+
   done();
 });
