@@ -1,7 +1,7 @@
 'use strict';
 
 function print(...args) {
-  console.log(args);
+  console.log(...args);
 }
 
 // x = 13;

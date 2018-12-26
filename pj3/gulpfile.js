@@ -9,7 +9,7 @@ gulp.task('default', function(done) {
   gulp.src('es6/**/*.js')
     .pipe(eslint({fix: true}))
     .pipe(eslint.format())
-    .pipe(eslintIfFixed('es6'))
+    .pipe(eslintIfFixed('es6'));
 
   gulp.src('public/es6/**/*.js')
     .pipe(eslint({fix: true}))
