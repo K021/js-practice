@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dealing with Elements</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div id="content">
+        <h1>This is a test HTML</h1>
+        <p>I'm trying to make a unique feature, like <i>highlights</i>.</p>
+        <p>This is another paragraph without key words.</p>
+        <button data-action="highlight" data-containing="unique">
+            Highlight paragraphs containing 'unique'
+        </button>
+        <button data-action="removeHighlights">
+            Remove highlights
+        </button>
+    </div>
+    <div class="serverInfo">
+        Server is running on <span data-replace="platform">???</span>
+        with Node <span data-replace="nodeVersion">???</span>.
+        It has been up for <span data-replace="uptime">???</span> seconds.
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="public/es6/dom1.js"></script>
+</body>
+</html>
